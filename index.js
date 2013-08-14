@@ -19,7 +19,7 @@ var createBrowserStackTunnel = function(logger, config, emitter) {
     hosts: [{
       name: config.hostname,
       port: config.port,
-      sslFlag: 0
+      sslFlag: !!bsConfig.sslTunnel ? 1 : 0
     }]
   });
 
